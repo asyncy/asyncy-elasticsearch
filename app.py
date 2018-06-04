@@ -3,7 +3,7 @@ import argparse
 import requests
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--method', help='TODO')
+parser.add_argument('method', help='TODO')
 parser.add_argument('--endpoint', help='TODO')
 parser.add_argument('--data', help='TODO')
 
