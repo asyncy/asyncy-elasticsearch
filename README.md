@@ -2,5 +2,5 @@
 Elasticsearch for Aysncy.
 
 ```coffee
-stats = elasticsearch method:'get' endpoint:'/_stats'
+stats = elasticsearch get endpoint:'/_stats'
 ```
