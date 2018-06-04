@@ -1,7 +1,37 @@
 commands:
-  entrypoint:
-    help: Run elasticsearch
-    additional_args: true
-    additional_kwargs: true
-env:
+  get:
+    arguments:
+      url:
+        type: string
+        required: true
+        help: URL to get data from
+  post:
+    arguments:
+      url:
+        type: string
+        required: true
+        help: URL to post data to
+      data:
+        type: object
+        required: true
+        help: The data you want to post
+  put:
+    arguments:
+      url:
+        type: string
+        required: true
+        help: URL to put data to
+      data:
+        type: object
+        required: true
+        help: The data you want to put
+  delete:  
+    arguments:
+      url:
+        type: string
+        required: true
+        help: URL to delete data from
+
+environment:
     ELASTICSEARCH_URL:
+      type: string
