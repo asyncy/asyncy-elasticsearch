@@ -1,4 +1,9 @@
-omg: 1
+oms: 1
+info:
+  contact:
+    name: Open Microservices
+    url: 'https://openmicroservices.org'
+    email: core@openmicroservices.org
 actions:
   get:
     arguments:
@@ -26,13 +31,12 @@ actions:
         type: object
         required: true
         help: The data you want to put
-  delete:  
+  delete:
     arguments:
       url:
         type: string
         required: true
         help: URL to delete data from
-
 environment:
-    ELASTICSEARCH_URL:
-      type: string
+  ELASTICSEARCH_URL:
+    type: string
