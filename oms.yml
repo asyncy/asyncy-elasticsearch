@@ -1,5 +1,7 @@
 oms: 1
 info:
+  title: Elasticsearch
+  description: Elasticsearch is a search engine that provides full-text search with schema-free JSON documents.
   contact:
     name: Open Microservices
     url: 'https://openmicroservices.org'
