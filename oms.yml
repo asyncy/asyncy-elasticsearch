@@ -1,5 +1,6 @@
 oms: 1
 info:
+  version: 1.0.0
   title: Elasticsearch
   description: Elasticsearch is a search engine that provides full-text search with schema-free JSON documents.
   contact:
@@ -8,37 +9,75 @@ info:
     email: core@openmicroservices.org
 actions:
   get:
+    http:
+      port: 3000
+      method: get
+      path: /
+      contentType: application/json
     arguments:
       url:
         type: string
+        in: requestBody
         required: true
         help: URL to get data from
+    output:
+      contentType: application/json
+      type: map
   post:
+    http:
+      port: 3000
+      method: post
+      path: /
+      contentType: application/json
     arguments:
       url:
         type: string
+        in: requestBody
         required: true
         help: URL to post data to
       data:
-        type: object
+        type: map
+        in: requestBody
         required: true
         help: The data you want to post
+    output:
+      contentType: application/json
+      type: map
   put:
+    http:
+      port: 3000
+      method: put
+      path: /
+      contentType: application/json
     arguments:
       url:
         type: string
+        in: requestBody
         required: true
         help: URL to put data to
       data:
-        type: object
+        type: map
+        in: requestBody
         required: true
         help: The data you want to put
+    output:
+      contentType: application/json
+      type: map
   delete:
+    http:
+      port: 3000
+      method: delete
+      path: /
+      contentType: application/json
     arguments:
       url:
         type: string
+        in: requestBody
         required: true
         help: URL to delete data from
+    output:
+      contentType: application/json
+      type: map
 environment:
   ELASTICSEARCH_URL:
     type: string
